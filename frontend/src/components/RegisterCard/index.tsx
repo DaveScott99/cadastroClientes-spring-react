@@ -1,6 +1,23 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Client } from "../../models/client";
+import { BASE_URL } from "../../utils/request";
 import "./styles.css";
 
 function RegisterCard() {
+
+  const [ cadastro, setPosts ] = useState<Client[]>([])
+
+  useEffect(() => {
+    axios.get(`${BASE_URL}/clientes`)
+      .then(response => {
+        setPosts(response.data)
+      })
+      .catch(() => {
+        console.log("Deu erro!")
+      })
+  }, [])
+
   return (
     <div className="divTabela">
       <table>
@@ -16,15 +33,17 @@ function RegisterCard() {
           </tr>
         </thead>
         <tbody>
-
-            <tr>
-                <td>1</td>
-                <td>Davi Santos</td>
-                <td>Rua 1</td>
-                <td>960181150</td>
-                <td>davicalixto2077@gmail.com</td>
-            </tr>
-
+          {cadastro.map((cadastro, key) => {
+            return (
+              <tr key={cadastro.id}>
+                <td>{cadastro.id}</td>
+                <td>{cadastro.nome}</td>
+                <td>{cadastro.endereco}</td>
+                <td>{cadastro.telefone}</td>
+                <td>{cadastro.email}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
