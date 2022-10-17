@@ -1,9 +1,29 @@
-.header {
-    min-height: 70px;
+header {
+    border: 1px solid red;
+    width: 30%;
+    height: 100vh;
+
+}
+
+.container-form {
+    border: 1px solid red;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: auto 12px;
+    justify-content: center;
+    flex-direction:column;
+    width: 100%;
+    height: 80vh;
+    margin-top: 70px ;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+form input {
+    
 }
 
 .header span {
@@ -12,58 +32,3 @@
     word-break: break-all;
 }
 
-#new {
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
-    color: white;
-    background-color: rgb(57, 57, 226);
-}
-
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal-content {
-    width: 35%;
-    font-weight: bold;
-    max-width: 500px;
-    background-color: white;
-    padding: 50px;
-    border-radius: 25px;
-  }
-  
-  .modal input {
-    font-size: 12pt;
-    width: 100%;
-    outline: none;
-    padding: 5px 0px; 
-    margin-bottom: 20px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
-  
-  .modal button {
-    display: flex;
-    justify-content: center;
-    font-size: 12pt;
-    width: 50%;
-    margin: 10px auto;
-    outline: none;
-    border-radius: 20px; 
-    padding: 5px 10px; 
-    border: none;
-    background-color: rgb(57, 57, 226);
-    color: white;
-  }

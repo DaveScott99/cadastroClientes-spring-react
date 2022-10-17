@@ -32,6 +32,7 @@ tr {
 }
 
 tbody tr td {
+    padding: 3px;
     vertical-align: text-top;
     text-align: center;
 }
@@ -53,4 +54,17 @@ thead tr th.acao {
 
 tbody tr td.acao {
     text-align: center;
+}
+
+.btn-edit , .btn-delete  {
+    padding: 2px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+
+.btn-delete {
+    color: white;
+    background-color: rgb(255, 0, 0);
 }

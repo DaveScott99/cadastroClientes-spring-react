@@ -1,0 +1,45 @@
+#new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: rgba(244, 5, 5, 0);
+    margin-right: 20px;
+}
+img {
+    width: 50px;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    width: 35%;
+    font-weight: bold;
+    max-width: 500px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 25px;
+  }
+  
+  .modal input {
+    font-size: 12pt;
+    width: 100%;
+    outline: none;
+    padding: 5px 0px; 
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  

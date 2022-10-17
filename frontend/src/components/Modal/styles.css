@@ -1,0 +1,39 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 30%;
+    height: 60%;
+    color: #000;
+    border-radius: 10px;
+}
+
+.close {
+    background-color: blue;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    padding: 20px;
+    width: 70px;
+    height: 32px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: calc(-100% + 85px);
+    top: 16px;
+    cursor: pointer;
+}
