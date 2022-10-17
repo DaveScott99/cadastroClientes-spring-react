@@ -22,7 +22,7 @@ function App() {
   // UseEffect
   // REQUISIÇÃO DOS DADOS
   useEffect(() => {
-    fetch("http://localhost:8080/api/clientes")
+    fetch(`${BASE_URL}/clientes`)
     .then(response => response.json())
     .then(converted_response => setClientes(converted_response))
     .catch(err => {
@@ -37,7 +37,7 @@ function App() {
 
   // Cadastrar cliente
   const cadastrar = () => {
-    fetch('http://localhost:8080/api/clientes', {
+    fetch(`${BASE_URL}/clientes`, {
       method: 'post',
       body: JSON.stringify(objCliente),
       headers: {
@@ -65,7 +65,7 @@ function App() {
 
   // Alterar cliente
   const alterar = () => {
-    fetch(`http://localhost:8080/api/clientes/${objCliente.id}`, {
+    fetch(`${BASE_URL}/clientes/${objCliente.id}`, {
       method: 'put',
       body: JSON.stringify(objCliente),
       headers: {
@@ -110,7 +110,7 @@ function App() {
 
   // Remover cliente
   const remover = () => {
-    fetch(`http://localhost:8080/api/clientes/${objCliente.id}`, {
+    fetch(`${BASE_URL}/clientes/${objCliente.id}`, {
       method: 'delete',
       headers: {
         'Content-type':'application/json',
